@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="jumbotron">
+    <h4>TMIN, TAVG, and TMAX </h4>
+    <div class="container">
+        <p>Data between {{startdate}} and {{enddate}}</p>
+        <p>TMIN: {{result[0][0]}}, TAVG: {{result[0][2]}}, TMAX: {{result[0][1]}}</p>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="jumbotron">
+    <h1>Welcome</h1>
+    <p>Please click on the link or tab above to see the results</p>
+    <p>
+        <ul>
+            <li>
+                <a class="nav-link" href="{{ url_for('precipitation') }}">/api/v1.0/precipitation</a>
+            </li>
+            <li>
+                <a class="nav-link" href="{{ url_for('stations') }}">/api/v1.0/stations</a>
+            </li>
+            <li>
+                <a class="nav-link" href="{{ url_for('temperature') }}">/api/v1.0/tobs</a>
+            </li>
+            <li>
+                <a class="nav-link" href="{{ url_for('list_data') }}">/api/v1.0/all</a></li>
+            </li>
+            <li>
+                <a class="nav-link" href="{{ url_for('startenddate', start='2016-08-01', end='2017-08-01') }}">/api/v1.0/&ltstart&gt/&ltend&gt or /api/v1.0/&lt start &gt</a>
+            </li>
+        </ul>
+
+    </p>
+</div>
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="jumbotron">
+    <h1>Here is the list of all the data: </h1>
+    <div class="container">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Station</th>
+                    <th>Date</th>
+                    <th>Percipitation</th>
+                    <th>Temperature</th>
+                </tr>
+                <tbody>
+                    {% for item in list_data %}
+                        <tr>
+                            <td>{{ item.station }}</td>
+                            <td>{{item.date}}</td>
+                            <td>{{item.prcp}}</td>
+                            <td>{{item.tobs}}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </thead>
+        </table>
+    </div>
+</div>
+
+
+{% endblock %}
